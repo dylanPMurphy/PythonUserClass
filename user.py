@@ -20,3 +20,34 @@ class User:		# here's what we have so far
     def transfer_money(self, other_user, amount):                # - have this method decrease the user's balance by the amount and add that amount to other other_user's balance
         self.make_withdrawal(amount)
         other_user.make_deposit(amount)
+
+def testCases():
+    user1 = User('doug', 'doug@doug.com')
+    user2 = User('fran', 'fran@fran.fran')
+    user3 = User('reg','reggie@reg.com')
+    user1.make_deposit(231)
+    user1.display_user_balance()
+
+    user1.make_deposit(12231)
+
+    user1.display_user_balance()
+
+
+    user2.make_deposit(22331)
+    user2.make_deposit(231)
+    user2.display_user_balance()
+
+
+    user2.make_withdrawal(213)
+    user2.make_withdrawal(2123)
+    user2.display_user_balance()
+    
+    
+
+    user3.make_deposit(231211)
+    user3.make_withdrawal(213)
+    user3.make_withdrawal(213)
+    user3.make_withdrawal(213)
+    user3.display_user_balance()
+    
+testCases()
